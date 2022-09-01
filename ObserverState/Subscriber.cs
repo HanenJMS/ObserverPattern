@@ -11,7 +11,7 @@ namespace ObserverPattern.ObserverState.ClientManager
             string updateMessage = message as string;
             Console.WriteLine(updateMessage);
         }
-        public void SubscribeTo(ISubscription sub)
+        public void SubscribeTo(IPublisher sub)
         {
             if (sub.AddSubscriber(this))
             {
@@ -19,7 +19,7 @@ namespace ObserverPattern.ObserverState.ClientManager
             }
         }
 
-        public void UnsubscribeTo(ISubscription sub)
+        public void UnsubscribeTo(IPublisher sub)
         {
             if (sub.RemoveSubscriber(this))
             {

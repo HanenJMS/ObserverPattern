@@ -1,6 +1,6 @@
 ﻿namespace ObserverPattern.ObserverState.Interface
 {
-    internal interface ISubscription
+    internal interface IPublisher
     {
         string name { get; set; }
         void NotifySubscribers(object message);

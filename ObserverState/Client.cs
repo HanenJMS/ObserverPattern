@@ -1,6 +1,4 @@
-﻿
-
-namespace ObserverPattern.ObserverState.ClientManager
+﻿namespace ObserverPattern.ObserverState.ClientManager
 {
     internal class Client : Subscriber
     {

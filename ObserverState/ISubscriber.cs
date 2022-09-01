@@ -4,7 +4,7 @@
     {
         string name { get; set; }
         void Update(object message);
-        void SubscribeTo(ISubscription sub);
-        void UnsubscribeTo(ISubscription sub);
+        void SubscribeTo(IPublisher sub);
+        void UnsubscribeTo(IPublisher sub);
     }
 }

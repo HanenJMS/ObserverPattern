@@ -12,11 +12,14 @@ namespace ObserverPattern
             //TestingAbstract();
             Client thisIsMe = new Client("Jung");
             Client SomeElse = new Client("Tommy");
-            Subscription techGenius = new Subscription("Tech Genius");
+            Publisher techGenius = new Publisher("Tech Genius");
             thisIsMe.SubscribeTo(techGenius);
             thisIsMe.SubscribeTo(techGenius);
             SomeElse.SubscribeTo(techGenius);
             techGenius.ChangeMessage("Attention: This is an update. That is all.");
+            SomeElse.UnsubscribeTo(techGenius);
+            SomeElse.UnsubscribeTo(techGenius);
+            techGenius.ChangeMessage("Attention: New Update. That is all.");
             Console.ReadLine();
         }
 

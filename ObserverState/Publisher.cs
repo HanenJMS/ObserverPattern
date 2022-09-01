@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 namespace ObserverPattern.ObserverState.PublishingManager
 {
-    internal class Subscription : ISubscription
+    internal class Publisher : IPublisher
     {
         List<ISubscriber> subscribers;
         public string name { get; set; }
-        public Subscription(string name)
+        public Publisher(string name)
         {
             this.name = name;
             subscribers = new List<ISubscriber>();
