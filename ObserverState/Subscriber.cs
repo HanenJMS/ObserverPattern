@@ -1,13 +1,14 @@
 ﻿using ObserverPattern.ObserverState.Interface;
 using System;
 
-namespace ObserverPattern.ObserverState.ClientManager
+namespace ObserverPattern.ObserverState.SubscriberManager
 {
     internal abstract class Subscriber : ISubscriber
     {
         public string name { get; set; }
         public void Update(object message)
         {
+            Console.WriteLine($"{name} has reacted to an event: ");
             string updateMessage = message as string;
             Console.WriteLine(updateMessage);
         }
