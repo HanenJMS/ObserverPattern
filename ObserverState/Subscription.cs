@@ -1,12 +1,13 @@
-﻿using System;
+﻿using ObserverPattern.ObserverState.Interface;
+using System;
 using System.Collections.Generic;
 
-namespace ObserverPattern.ObserverState
+namespace ObserverPattern.ObserverState.PublishingManager
 {
     internal class Subscription : ISubscription
     {
         List<ISubscriber> subscribers;
-        string name;
+        public string name { get; set; }
         public Subscription(string name)
         {
             this.name = name;
@@ -20,7 +21,7 @@ namespace ObserverPattern.ObserverState
                 subscriber.Update(message);
             }
         }
-        public bool AddSubscriber(Subscriber subscriber)
+        public bool AddSubscriber(ISubscriber subscriber)
         {
             if (subscribers.Contains(subscriber))
             {
@@ -30,9 +31,9 @@ namespace ObserverPattern.ObserverState
             subscribers.Add(subscriber);
             return true;
         }
-        public bool RemoveSubscriber(Subscriber subscriber)
+        public bool RemoveSubscriber(ISubscriber subscriber)
         {
-            if(!subscribers.Contains(subscriber))
+            if (!subscribers.Contains(subscriber))
             {
                 Console.WriteLine($"{subscriber.name} is not subscribed to {name}");
                 return false;

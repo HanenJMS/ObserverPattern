@@ -1,24 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ObserverPattern.ObserverState.Interface;
+using System;
 
-namespace ObserverPattern.ObserverState
+namespace ObserverPattern.ObserverState.ClientManager
 {
     internal abstract class Subscriber : ISubscriber
     {
-        public string name;
+        public string name { get; set; }
         public void Update(object message)
         {
             string updateMessage = message as string;
             Console.WriteLine(updateMessage);
         }
-        public void SubscribeTo(Subscription sub)
+        public void SubscribeTo(ISubscription sub)
         {
             if (sub.AddSubscriber(this))
             {
-                Console.WriteLine($"{name} has successfully subscribed to {sub.GetName()}");
+                Console.WriteLine($"{name} has successfully subscribed to {sub.name}");
+            }
+        }
+
+        public void UnsubscribeTo(ISubscription sub)
+        {
+            if (sub.RemoveSubscriber(this))
+            {
+                Console.WriteLine($"{name} has successfully unsubscribed to {sub.name}");
             }
         }
     }

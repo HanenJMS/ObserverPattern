@@ -1,5 +1,6 @@
 ﻿using ObserverPattern.OberverAbstract;
-using ObserverPattern.ObserverState;
+using ObserverPattern.ObserverState.ClientManager;
+using ObserverPattern.ObserverState.PublishingManager;
 using System;
 
 namespace ObserverPattern

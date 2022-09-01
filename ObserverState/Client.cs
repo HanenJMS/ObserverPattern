@@ -1,6 +1,6 @@
-﻿using System;
+﻿
 
-namespace ObserverPattern.ObserverState
+namespace ObserverPattern.ObserverState.ClientManager
 {
     internal class Client : Subscriber
     {

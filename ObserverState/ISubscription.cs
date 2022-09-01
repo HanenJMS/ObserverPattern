@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ObserverPattern.ObserverState
+﻿namespace ObserverPattern.ObserverState.Interface
 {
     internal interface ISubscription
     {
+        string name { get; set; }
         void NotifySubscribers(object message);
-        bool AddSubscriber(Subscriber subscriber);
-        bool RemoveSubscriber(Subscriber subscriber);
+        bool AddSubscriber(ISubscriber subscriber);
+        bool RemoveSubscriber(ISubscriber subscriber);
     }
 }
