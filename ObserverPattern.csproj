@@ -49,9 +49,9 @@
     <Compile Include="OberverAbstract\Subject.cs" />
     <Compile Include="ObserverState\Client.cs" />
     <Compile Include="ObserverState\ISubscriber.cs" />
-    <Compile Include="ObserverState\ISubscription.cs" />
+    <Compile Include="ObserverState\IPublisher.cs" />
     <Compile Include="ObserverState\Subscriber.cs" />
-    <Compile Include="ObserverState\Subscription.cs" />
+    <Compile Include="ObserverState\Publisher.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
