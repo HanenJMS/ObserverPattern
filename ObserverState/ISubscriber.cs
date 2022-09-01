@@ -9,5 +9,6 @@ namespace ObserverPattern.ObserverState
     internal interface ISubscriber
     {
         void Update(object message);
+        void SubscribeTo(Subscription sub);
     }
 }

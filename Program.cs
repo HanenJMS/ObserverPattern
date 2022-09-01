@@ -10,9 +10,11 @@ namespace ObserverPattern
         {
             //TestingAbstract();
             Client thisIsMe = new Client("Jung");
+            Client SomeElse = new Client("Tommy");
             Subscription techGenius = new Subscription("Tech Genius");
             thisIsMe.SubscribeTo(techGenius);
             thisIsMe.SubscribeTo(techGenius);
+            SomeElse.SubscribeTo(techGenius);
             techGenius.ChangeMessage("Attention: This is an update. That is all.");
             Console.ReadLine();
         }
